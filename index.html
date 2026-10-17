@@ -1,477 +1,154 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111111">
-  <meta name="description" content="Ahmed Ayad — AI and Deep Learning Engineer. Generative AI, Computer Vision, Transformers, and AI Agents.">
-
-  <title>Ahmed Ayad</title>
-
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #111111;
-      --text: #e2e2e2;
-      --muted: #a1a1a1;
-      --link: #8bd5b0;
-      --border: #343434;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 25px;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 17px;
-      line-height: 1.75;
-    }
-
-    main {
-      max-width: 790px;
-      width: 90%;
-      margin: 48px auto 80px;
-    }
-
-    a {
-      color: var(--link);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    header {
-      margin-bottom: 36px;
-    }
-
-    h1 {
-      margin: 0 0 4px;
-      font-size: 2.25rem;
-      font-weight: 600;
-      letter-spacing: -1px;
-      line-height: 1.3;
-    }
-
-    .subtitle {
-      color: var(--muted);
-      margin: 0 0 18px;
-    }
-
-    .intro {
-      margin: 0 0 17px;
-    }
-
-    .socials {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 17px;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 20px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 11px 0;
-      margin: 27px 0 37px;
-      font-size: 15px;
-    }
-
-    section {
-      margin-bottom: 38px;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin: 0 0 13px;
-      padding-bottom: 5px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    h3 {
-      font-size: 1.05rem;
-      margin: 22px 0 5px;
-      font-weight: 600;
-    }
-
-    p {
-      margin: 8px 0 13px;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .timeline {
-      display: grid;
-      grid-template-columns: 112px minmax(0, 1fr);
-      gap: 5px 17px;
-      margin: 15px 0;
-    }
-
-    .date {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    ul {
-      padding-left: 23px;
-      margin: 9px 0 15px;
-    }
-
-    li {
-      padding: 3px 0;
-    }
-
-    .project {
-      margin: 17px 0 22px;
-    }
-
-    .project-title {
-      font-weight: bold;
-    }
-
-    .tags {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .note {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding-top: 17px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    @media (max-width: 520px) {
-      body {
-        font-size: 16px;
-      }
-
-      main {
-        margin-top: 28px;
-      }
-
-      h1 {
-        font-size: 1.9rem;
-      }
-
-      .timeline {
-        grid-template-columns: 1fr;
-        gap: 0;
-        margin-bottom: 19px;
-      }
-
-      .date {
-        margin-top: 5px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0b0d">
+<title>Ahmed Ayad — Applied AI Engineer</title>
+<meta name="description" content="Ahmed Ayad, Applied AI Engineer (ML & Generative AI). Computer Science & AI undergraduate building generative models, computer vision and LLM systems under limited compute.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ahmed Ayad — Applied AI Engineer | ML & Generative AI">
+<meta property="og:description" content="Building intelligent AI systems and training complex models under limited compute.">
+<meta property="og:url" content="https://ahmedayad0168.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230b0b0d'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='%237fb7e6' font-family='monospace'%3EA%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:dark;--bg:#0b0b0d;--text:#e8e8e8;--muted:#9a9aa2;--link:#7fb7e6;--line:#26262b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+main,footer{max-width:760px;margin:0 auto;padding:0 22px}
+a{color:var(--link);text-decoration:none}
+a:hover,a:focus-visible{text-decoration:underline;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:2px}
+header{padding:72px 0 28px}
+h1{font-size:2.3rem;line-height:1.15;margin:0 0 4px;font-weight:650;letter-spacing:-.02em}
+.role{color:var(--muted);margin:0 0 22px}
+.intro{font-size:1.1rem;margin:0 0 22px}
+.links{display:flex;flex-wrap:wrap;gap:4px 0;font-size:.95rem;margin:0;padding:0;list-style:none}
+.links li+li::before{content:"·";color:var(--muted);margin:0 10px}
+section{border-top:1px solid var(--line);padding:34px 0 6px}
+h2{font-size:1.2rem;margin:0 0 18px;font-weight:650}
+p{margin:0 0 16px}
+.muted{color:var(--muted)}
+.small{font-size:.92rem}
+.proj{margin:0 0 26px}
+.proj h3{font-size:1.05rem;margin:0 0 2px;font-weight:600}
+.proj .tech{color:var(--muted);font-size:.88rem;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;margin:0 0 8px}
+.proj p{margin:0 0 8px}
+.row{display:grid;grid-template-columns:132px 1fr;gap:4px 18px;margin:0 0 20px}
+.row .date{color:var(--muted);font-size:.9rem;padding-top:3px}
+.row h3{font-size:1rem;margin:0;font-weight:600}
+.row p{margin:4px 0 0;font-size:.97rem}
+ul.plain{margin:0 0 16px;padding-left:20px}
+ul.plain li{margin-bottom:6px}
+dl{margin:0}dt{font-weight:600;margin-top:10px}dd{margin:0;color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:34px;padding:22px 22px 60px;color:var(--muted);font-size:.9rem}
+@media(max-width:600px){body{font-size:16px}header{padding-top:44px}h1{font-size:1.9rem}.row{grid-template-columns:1fr;gap:0}}
+</style>
 </head>
-
 <body>
 <main>
-
-  <header id="home">
-    <h1>Ahmed Ayad</h1>
-
-    <p class="subtitle">
-      AI &amp; Deep Learning Engineer
-    </p>
-
-    <p class="intro">
-      I like to build AI systems and train deep neural networks
-      under limited compute resources. 🧠
-    </p>
-
-    <p>
-      I'm a Computer Science &amp; AI undergraduate interested in
-      Generative AI, Deep Learning, Computer Vision, and the
-      engineering behind modern AI systems.
-    </p>
-
-    <p>
-      I enjoy implementing models, experimenting with architectures,
-      understanding how things work under the hood, and building
-      practical applications from research ideas.
-    </p>
-
-    <div class="socials">
-      <a href="https://github.com/ahmedayad0168"
-         target="_blank" rel="noopener noreferrer">GitHub</a>
-
-      <a href="https://www.linkedin.com/in/ahmed-ayad-7854aa3a7/"
-         target="_blank" rel="noopener noreferrer">LinkedIn</a>
-
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </header>
-
-  <nav aria-label="Page navigation">
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Technical skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>about</h2>
-
-    <p>
-      My main interests are deep learning, generative modeling,
-      computer vision, language models, and agentic AI.
-    </p>
-
-    <p>
-      I work across the AI development process: data preparation,
-      model implementation, training, evaluation, inference,
-      APIs, and deployment.
-    </p>
-
-    <p>
-      I'm particularly interested in making models work within
-      practical hardware constraints, and in understanding the
-      mathematical and engineering principles behind them.
-    </p>
-  </section>
-
-  <section id="education">
-    <h2>education</h2>
-
-    <div class="timeline">
-      <div class="date">2024 – 2028</div>
-      <div>
-        <strong>B.Sc. in Computer Science &amp; Artificial Intelligence</strong>
-        <br>
-        Sadat City University
-        <p class="muted">
-          Undergraduate studies in computer science and AI.
-        </p>
-      </div>
-
-      <div class="date">2025 – 2026</div>
-      <div>
-        <strong>Professional Diploma in Data Science &amp; AI</strong>
-        <br>
-        AMIT Learning
-        <p class="muted">
-          Machine learning, deep learning, NLP, computer vision, and SQL.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <h2>experience</h2>
-
-    <div class="timeline">
-      <div class="date">2026 – Present</div>
-      <div>
-        <strong>Freelance AI Engineer</strong>
-        <p>
-          Building AI applications involving multimodal interview
-          analysis, conversational systems, and retrieval-augmented
-          generation.
-        </p>
-      </div>
-
-      <div class="date">2026 – Present</div>
-      <div>
-        <strong>Independent AI Research &amp; Development</strong>
-        <p>
-          Exploring model architectures, generative modeling,
-          training strategies, and resource-efficient AI engineering.
-        </p>
-      </div>
-    </div>
-
-    <p class="note">
-      Experience descriptions should reflect the work and results
-      you can substantiate.
-    </p>
-  </section>
-
-  <section id="projects">
-    <h2>selected projects</h2>
-
-    <div class="project">
-      <a class="project-title"
-         href="https://github.com/ahmedayad0168/FlowCraft-DiT"
-         target="_blank" rel="noopener noreferrer">
-        FlowCraft-DiT ↗
-      </a>
-
-      <p>
-        A text-to-image model built around Rectified Flow Matching
-        and a multimodal Diffusion Transformer. The project explores
-        training generative models from scratch under limited GPU memory.
-      </p>
-
-      <div class="tags">
-        PyTorch · Diffusion Models · Transformers · Generative AI
-      </div>
-    </div>
-
-    <div class="project">
-      <a class="project-title"
-         href="https://github.com/ahmedayad0168/Omni-AgriVision"
-         target="_blank" rel="noopener noreferrer">
-        Omni-AgriVision ↗
-      </a>
-
-      <p>
-        An agriculture-focused AI platform combining object detection,
-        multi-object tracking, image classification, lesion segmentation,
-        and retrieval-based AI assistance.
-      </p>
-
-      <div class="tags">
-        YOLO · Computer Vision · FastAPI · RAG · AI Agents
-      </div>
-    </div>
-
-    <div class="project">
-      <a class="project-title"
-         href="https://github.com/ahmedayad0168/multi-agent-system"
-         target="_blank" rel="noopener noreferrer">
-        Multi-Agent System ↗
-      </a>
-
-      <p>
-        A multi-agent workflow with planning, research, critique,
-        and memory components, integrating language models and search.
-      </p>
-
-      <div class="tags">
-        LLMs · Agentic AI · Python · Retrieval
-      </div>
-    </div>
-
-    <div class="project">
-      <a class="project-title"
-         href="https://github.com/ahmedayad0168/rag-chatbot-with-ollama"
-         target="_blank" rel="noopener noreferrer">
-        RAG Chatbot ↗
-      </a>
-
-      <p>
-        A document-grounded chatbot exploring semantic retrieval,
-        embeddings, and local language-model inference.
-      </p>
-
-      <div class="tags">
-        RAG · Ollama · Embeddings · LLMs
-      </div>
-    </div>
-
-    <div class="project">
-      <a class="project-title"
-         href="https://github.com/ahmedayad0168/DiffusionCraft"
-         target="_blank" rel="noopener noreferrer">
-        DiffusionCraft ↗
-      </a>
-
-      <p>
-        An experimental image-generation project exploring
-        diffusion-model training and generative learning.
-      </p>
-
-      <div class="tags">
-        Deep Learning · PyTorch · Generative Models
-      </div>
-    </div>
-
-    <p>
-      More projects and source code are available on
-      <a href="https://github.com/ahmedayad0168?tab=repositories"
-         target="_blank" rel="noopener noreferrer">
-        my GitHub repositories ↗
-      </a>.
-    </p>
-  </section>
-
-  <section id="skills">
-    <h2>technical skills</h2>
-
-    <p>
-      <strong>Languages:</strong>
-      Python, SQL
-    </p>
-
-    <p>
-      <strong>Deep Learning:</strong>
-      PyTorch, neural networks, Transformers, diffusion models,
-      model training and evaluation
-    </p>
-
-    <p>
-      <strong>Generative AI:</strong>
-      LLMs, RAG, embeddings, AI agents, multimodal systems
-    </p>
-
-    <p>
-      <strong>Computer Vision:</strong>
-      Object detection, tracking, classification, segmentation
-    </p>
-
-    <p>
-      <strong>Engineering:</strong>
-      FastAPI, Docker, Git, databases, model serving
-    </p>
-  </section>
-
-  <section id="contact">
-    <h2>contact</h2>
-
-    <p>
-      I'm interested in AI engineering opportunities, internships,
-      deep learning research, and building useful AI systems.
-    </p>
-
-    <ul>
-      <li>
-        <a href="https://github.com/ahmedayad0168"
-           target="_blank" rel="noopener noreferrer">GitHub</a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/ahmed-ayad-7854aa3a7/"
-           target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </li>
+<header>
+  <h1>Ahmed Ayad</h1>
+  <p class="role">Applied AI Engineer | ML &amp; Generative AI</p>
+  <p class="intro">I enjoy building intelligent AI systems and exploring how complex models can be trained under limited compute, turning research concepts into efficient, practical solutions.</p>
+  <nav aria-label="Primary">
+    <ul class="links">
+      <li><a href="https://github.com/ahmedayad0168">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/ahmed-ayad-7854aa3a7/">LinkedIn</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="https://drive.google.com/file/d/1_Kc1XO6eNCpAgfwQ01ifuw7wt8nSo4_V/view?usp=drive_link">CV</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </section>
+  </nav>
+</header>
 
-  <footer>
-    <p>
-      Ahmed Ayad · AI &amp; Deep Learning Engineer
-      <br>
-      Built with plain HTML and CSS. Hosted on GitHub Pages.
-    </p>
-    <p>Last updated: October 2026</p>
-  </footer>
+<section id="about">
+  <h2>About</h2>
+  <p>I'm a Computer Science and AI undergraduate at the Faculty of Computers and Artificial Intelligence, Sadat City University, working across deep learning, generative AI, computer vision, and LLM-based applications. I care most about understanding how models work under the hood: implementing architectures myself, experimenting with them, and then wrapping them in APIs and interfaces so they become usable systems.</p>
+  <p>Much of my work is shaped by hardware constraints. I train and run models on modest GPUs, so efficiency (parameter count, VRAM, latency) is part of the design rather than an afterthought. I'm early in my career, and most of what I've built is independent experimentation and applied prototypes.</p>
+</section>
 
+<section id="projects">
+  <h2>Selected projects</h2>
+
+  <div class="proj">
+    <h3><a href="https://github.com/ahmedayad0168/FlowCraft-DiT">FlowCraft-DiT</a></h3>
+    <p class="tech">PyTorch · Rectified Flow · MM-DiT · CLIP</p>
+    <p>An experimental text-to-image model trained from scratch with Rectified Flow Matching and a Multimodal Diffusion Transformer. It uses AdaLN-Zero, 2D rotary position embeddings, CLIP text conditioning, latent image representations, mixed-precision training, and ODE-based sampling. The documented 10.1M-parameter configuration generates 128×128 images in roughly 1.2 s each (28 ODE steps) using about 4.2 GB of VRAM. It is a research implementation: the repository itself notes limits from training progress, dataset size, and model capacity, so it is not a state-of-the-art generator.</p>
+  </div>
+
+  <div class="proj">
+    <h3><a href="https://github.com/ahmedayad0168/Omni-AgriVision">Omni-AgriVision</a></h3>
+    <p class="tech">YOLO11 · ByteTrack · EfficientNet · DeepLabV3+ · FastAPI · SQL Server · Redis · Celery</p>
+    <p>An agricultural decision-support platform that connects computer vision with AI assistance. Drone video goes through object detection and multi-object tracking, then disease classification and lesion segmentation, feeding field analytics and a retrieval/agent layer for questions. Reported evaluation results from the repository: YOLO11m reaches 89.0% mAP50 (76.8% mAP50–95), and EfficientNet-B0 reaches 99.58% validation accuracy over 38 classes. These are documented evaluation numbers, not guaranteed field performance.</p>
+  </div>
+
+  <div class="proj">
+    <h3><a href="https://github.com/ahmedayad0168/multi-agent-system">Multi-Agent Research System</a></h3>
+    <p class="tech">Python · FAISS · Sentence Transformers · Tavily · RAGAS · Ollama · Gradio</p>
+    <p>A research assistant that coordinates specialized agents instead of producing one isolated answer. Questions are first tried against local documents (FAISS retrieval); if the local evidence is weak, a search agent collects web evidence. A critic agent checks faithfulness with RAGAS, and a persistent memory (JSON plus a FAISS index) carries context forward. It has a Gradio interface with microphone input.</p>
+  </div>
+
+  <div class="proj">
+    <h3><a href="https://github.com/ahmedayad0168/DiffusionCraft">DiffusionCraft</a></h3>
+    <p class="tech">PyTorch · VAE · CLIP ViT-B/32 · cross-attention U-Net · DDIM · FastAPI · Chainlit</p>
+    <p>A text-to-image latent diffusion pipeline built to learn the fundamentals end to end: a 3.71M-parameter VAE, frozen CLIP text conditioning, a conditional U-Net with cross-attention, and DDIM sampling, served through a FastAPI backend and a Chainlit chat interface. It differs from FlowCraft-DiT in architecture and objective: a convolutional U-Net with noise-prediction diffusion here, versus a transformer trained with flow matching there. The README is explicit that output quality is limited by compute, not code.</p>
+  </div>
+
+  <div class="proj">
+    <h3><a href="https://github.com/ahmedayad0168/rag-chatbot-with-ollama">Hybrid RAG + Text-to-SQL Assistant</a></h3>
+    <p class="tech">FAISS · BGE embeddings · fine-tuned T5 · SQL Server · Ollama (llama3)</p>
+    <p>A local assistant that answers from both PDFs and a SQL Server database. A router sends each question down a document path (FAISS retrieval with <code>bge-small-en-v1.5</code>), a SQL path (a fine-tuned T5-style model generates SQL, which is cleaned and validated to block dangerous statements before execution), or both, and Ollama writes the final answer.</p>
+  </div>
+
+  <p class="small muted"><strong>More:</strong> <a href="https://github.com/ahmedayad0168/Medical-Support-Assistant">Medical Support Assistant</a> (Chainlit + Ollama symptom extraction over an SQL Server knowledge base) and <a href="https://github.com/ahmedayad0168/Medical-Diagnosis-Project">Medical Diagnosis Project</a>. Both are educational and experimental, not intended for clinical use.</p>
+</section>
+
+<section id="experience">
+  <h2>Experience &amp; applied work</h2>
+  <div class="row"><div class="date">Oct 2026 – present</div><div><h3>AI Intern (Round 2) · Echo INC.</h3><p>Remote internship on LLMs, RAG architectures, and AI agents / agentic RAG workflows.</p></div></div>
+  <div class="row"><div class="date">Oct 2026 – present</div><div><h3>AI &amp; Machine Learning Intern · NextGen Institute</h3><p>Remote internship: Python, data preprocessing, EDA, and applied machine learning.</p></div></div>
+  <div class="row"><div class="date">Sep 2026 – present</div><div><h3>AI &amp; Data Intern · HVIA</h3><p>Hybrid internship in data and AI solutions. My first task was an <a href="https://lnkd.in/p/eAQ2Y3km">inventory and production-planning decision-support prototype</a> for the El-Sharnouby Group context: flagging shortages, excess stock and replenishment needs, recommending stock transfers before new production, and linking production needs to historical yield and capacity. On the modeled data it evaluated 177 product–location combinations, suggested 90 stock transfers, and identified sewing as the highest-risk bottleneck. These figures describe the prototype and its modeled data, not a deployed system.</p></div></div>
+  <div class="row"><div class="date">Jan 2026 – present</div><div><h3>Independent AI Research &amp; Open-Source Work</h3><p>Self-directed work on generative modeling, deep learning architectures, training and inference under constrained hardware, and agentic systems. Not formal employment.</p></div></div>
+  <div class="row"><div class="date">Aug – Oct 2026</div><div><h3>Freelance AI Engineer</h3><p>Built a multimodal video-interview agent that analyzes camera input and generates follow-up questions, plus a RAG chatbot with chat, audio, and document ingestion. Client details are private.</p></div></div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="row"><div class="date">2024 – 2028 (expected)</div><div><h3>B.Sc. Artificial Intelligence and Data Science</h3><p>Faculty of Computers and Artificial Intelligence, Sadat City University</p></div></div>
+  <div class="row"><div class="date">Jul 2025 – Mar 2026</div><div><h3>Professional Diploma, Data Science &amp; AI · AMIT Learning</h3><p>Machine learning, deep learning, NLP, computer vision, SQL, and MLOps fundamentals. Grade: 99%.</p></div></div>
+  <div class="row"><div class="date">Sep 2026</div><div><h3>HCIA-AI V4.0 · Huawei ICT Academy</h3><p>Course certificate covering AI, ML, and deep learning, with hands-on work on Huawei Cloud.</p></div></div>
+</section>
+
+<section id="areas">
+  <h2>Technical areas</h2>
+  <dl>
+    <dt>Deep learning</dt><dd>PyTorch, neural network training and evaluation</dd>
+    <dt>Generative AI</dt><dd>Diffusion models, flow matching, transformers, text-to-image</dd>
+    <dt>LLM systems</dt><dd>RAG, embeddings, local inference with Ollama, agents, multi-agent workflows</dd>
+    <dt>Computer vision</dt><dd>Detection, tracking, classification, segmentation</dd>
+    <dt>Engineering</dt><dd>Python, FastAPI, SQL Server, Redis, Celery, APIs, inference</dd>
+  </dl>
+  <p class="small muted" style="margin-top:12px">Listed where they appear in my projects; not every tool is used in every project.</p>
+</section>
+
+<section id="writing">
+  <h2>Writing &amp; updates</h2>
+  <ul class="plain">
+    <li><a href="https://lnkd.in/p/eAQ2Y3km">Turning business data into actionable decisions</a>: the HVIA inventory and production-planning prototype.</li>
+    <li>More project write-ups are on my <a href="https://www.linkedin.com/in/ahmed-ayad-7854aa3a7/recent-activity/all/">LinkedIn activity page</a>.</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:ahmedayad123ayad@gmail.com">ahmedayad123ayad@gmail.com</a><br>
+  Telegram: <a href="https://t.me/AhmedAyad72">@AhmedAyad72</a><br>
+  <a href="https://github.com/ahmedayad0168">GitHub</a> · <a href="https://www.linkedin.com/in/ahmed-ayad-7854aa3a7/">LinkedIn</a><br>
+  CV: <a href="https://drive.google.com/file/d/1_Kc1XO6eNCpAgfwQ01ifuw7wt8nSo4_V/view?usp=drive_link">primary</a> · <a href="https://drive.google.com/file/d/1IOzNKZXgF8UXm76Cr7l33CmqScWQfxGS/view?usp=drive_link">alternate</a></p>
+</section>
 </main>
+<footer>© 2026 Ahmed Ayad · <a href="https://github.com/ahmedayad0168">GitHub</a> · <a href="https://www.linkedin.com/in/ahmed-ayad-7854aa3a7/">LinkedIn</a></footer>
 </body>
 </html>
