@@ -3,453 +3,475 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ahmed Ayad — AI and Deep Learning Engineer building generative AI, computer vision, LLM, and agentic AI systems.">
-  <meta name="theme-color" content="#090b10">
-  <title>Ahmed Ayad | AI & Deep Learning Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Ahmed Ayad — AI and Deep Learning Engineer. Generative AI, Computer Vision, Transformers, and AI Agents.">
+
+  <title>Ahmed Ayad</title>
 
   <style>
     :root {
-      --bg: #090b10;
-      --panel: #10141d;
-      --text: #f2f5fa;
-      --muted: #a0aabc;
-      --accent: #70e1c1;
-      --border: #252c39;
-      --blue: #91aaff;
+      color-scheme: dark;
+      --bg: #111111;
+      --text: #e2e2e2;
+      --muted: #a1a1a1;
+      --link: #8bd5b0;
+      --border: #343434;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 25px;
+    }
 
     body {
+      margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      line-height: 1.75;
     }
 
-    a { color: inherit; text-decoration: none; }
-    a:focus-visible, button:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 4px;
+    main {
+      max-width: 790px;
+      width: 90%;
+      margin: 48px auto 80px;
     }
 
-    .container { width: min(1100px, 90%); margin: auto; }
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(9, 11, 16, .92);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    nav {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo { font-weight: 800; font-size: 1.15rem; }
-    .logo span { color: var(--accent); }
-
-    .nav-links { display: flex; gap: 25px; align-items: center; }
-    .nav-links a { color: var(--muted); font-size: .92rem; }
-    .nav-links a:hover { color: var(--accent); }
-
-    .menu-button {
-      display: none;
-      color: var(--text);
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 8px 12px;
-      cursor: pointer;
-    }
-
-    .hero { padding: 110px 0 90px; }
-
-    .eyebrow {
-      display: inline-block;
-      color: var(--accent);
-      border: 1px solid #31574f;
-      background: #10201d;
-      padding: 5px 12px;
-      border-radius: 30px;
-      font-size: .85rem;
-      margin-bottom: 24px;
+      margin-bottom: 36px;
     }
 
     h1 {
-      font-size: clamp(2.6rem, 7vw, 5.2rem);
-      line-height: 1.08;
-      letter-spacing: -.055em;
-      max-width: 850px;
+      margin: 0 0 4px;
+      font-size: 2.25rem;
+      font-weight: 600;
+      letter-spacing: -1px;
+      line-height: 1.3;
     }
 
-    h1 span {
-      background: linear-gradient(100deg, var(--accent), var(--blue));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero p {
+    .subtitle {
       color: var(--muted);
-      max-width: 700px;
-      margin-top: 25px;
-      font-size: 1.08rem;
+      margin: 0 0 18px;
     }
 
-    .actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
-
-    .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      padding: 11px 18px;
-      font-weight: 650;
-      transition: transform .2s, border-color .2s;
+    .intro {
+      margin: 0 0 17px;
     }
 
-    .btn:hover { transform: translateY(-2px); border-color: var(--accent); }
-    .btn.primary { background: var(--accent); color: #07130f; border-color: var(--accent); }
-
-    .section { padding: 65px 0; }
-    .section-head { margin-bottom: 28px; }
-
-    .section-head h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -.035em; }
-    .section-head p { color: var(--muted); margin-top: 6px; }
-
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 25px;
-      transition: border-color .2s, transform .2s;
-    }
-
-    .card:hover { border-color: #526b78; transform: translateY(-3px); }
-
-    .project-top {
+    .socials {
       display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 8px 17px;
     }
 
-    .project-top h3 { font-size: 1.2rem; }
-    .project-top a { color: var(--accent); font-size: .9rem; white-space: nowrap; }
-    .card p { color: var(--muted); margin: 13px 0 17px; }
-
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
-
-    .tag {
-      font-size: .78rem;
-      color: #c5d2e6;
-      background: #1a2230;
-      border: 1px solid #2a3547;
-      padding: 3px 9px;
-      border-radius: 6px;
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 11px 0;
+      margin: 27px 0 37px;
+      font-size: 15px;
     }
 
-    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
-    .skills .tag { font-size: .9rem; padding: 7px 12px; }
+    section {
+      margin-bottom: 38px;
+    }
 
-    .about-card { max-width: 850px; }
-    .about-card p { color: var(--muted); margin-top: 12px; }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 0 0 13px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--border);
+    }
 
-    .contact-card { text-align: center; padding: 40px 25px; }
-    .contact-card p { max-width: 600px; margin: 12px auto 0; }
+    h3 {
+      font-size: 1.05rem;
+      margin: 22px 0 5px;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 8px 0 13px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 5px 17px;
+      margin: 15px 0;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    ul {
+      padding-left: 23px;
+      margin: 9px 0 15px;
+    }
+
+    li {
+      padding: 3px 0;
+    }
+
+    .project {
+      margin: 17px 0 22px;
+    }
+
+    .project-title {
+      font-weight: bold;
+    }
+
+    .tags {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+    }
 
     footer {
       border-top: 1px solid var(--border);
-      padding: 25px 0;
+      padding-top: 17px;
       color: var(--muted);
-      font-size: .88rem;
-      text-align: center;
+      font-size: 14px;
     }
 
-    @media (max-width: 700px) {
-      .hero { padding: 75px 0 55px; }
-      .grid { grid-template-columns: 1fr; }
-      .menu-button { display: block; }
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-        padding: 20px 5%;
-        background: var(--bg);
-        border-bottom: 1px solid var(--border);
-        flex-direction: column;
-        align-items: flex-start;
+    @media (max-width: 520px) {
+      body {
+        font-size: 16px;
       }
-      .nav-links.open { display: flex; }
-    }
 
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition: none !important; }
+      main {
+        margin-top: 28px;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-bottom: 19px;
+      }
+
+      .date {
+        margin-top: 5px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <nav class="container" aria-label="Main navigation">
-      <a class="logo" href="#home">Ahmed<span>.</span></a>
+<main>
 
-      <button class="menu-button" id="menuButton"
-              aria-expanded="false" aria-controls="navLinks">
-        Menu
-      </button>
+  <header id="home">
+    <h1>Ahmed Ayad</h1>
 
-      <div class="nav-links" id="navLinks">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+    <p class="subtitle">
+      AI &amp; Deep Learning Engineer
+    </p>
+
+    <p class="intro">
+      I like to build AI systems and train deep neural networks
+      under limited compute resources. 🧠
+    </p>
+
+    <p>
+      I'm a Computer Science &amp; AI undergraduate interested in
+      Generative AI, Deep Learning, Computer Vision, and the
+      engineering behind modern AI systems.
+    </p>
+
+    <p>
+      I enjoy implementing models, experimenting with architectures,
+      understanding how things work under the hood, and building
+      practical applications from research ideas.
+    </p>
+
+    <div class="socials">
+      <a href="https://github.com/ahmedayad0168"
+         target="_blank" rel="noopener noreferrer">GitHub</a>
+
+      <a href="https://www.linkedin.com/in/ahmed-ayad-7854aa3a7/"
+         target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
   </header>
 
-  <main>
-    <section class="hero container" id="home">
-      <span class="eyebrow">AI Engineer · Computer Science & AI</span>
+  <nav aria-label="Page navigation">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Technical skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-      <h1>
-        Building AI systems.<br>
-        <span>Training models from scratch.</span>
-      </h1>
+  <section id="about">
+    <h2>about</h2>
+
+    <p>
+      My main interests are deep learning, generative modeling,
+      computer vision, language models, and agentic AI.
+    </p>
+
+    <p>
+      I work across the AI development process: data preparation,
+      model implementation, training, evaluation, inference,
+      APIs, and deployment.
+    </p>
+
+    <p>
+      I'm particularly interested in making models work within
+      practical hardware constraints, and in understanding the
+      mathematical and engineering principles behind them.
+    </p>
+  </section>
+
+  <section id="education">
+    <h2>education</h2>
+
+    <div class="timeline">
+      <div class="date">2024 – 2028</div>
+      <div>
+        <strong>B.Sc. in Computer Science &amp; Artificial Intelligence</strong>
+        <br>
+        Sadat City University
+        <p class="muted">
+          Undergraduate studies in computer science and AI.
+        </p>
+      </div>
+
+      <div class="date">2025 – 2026</div>
+      <div>
+        <strong>Professional Diploma in Data Science &amp; AI</strong>
+        <br>
+        AMIT Learning
+        <p class="muted">
+          Machine learning, deep learning, NLP, computer vision, and SQL.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>experience</h2>
+
+    <div class="timeline">
+      <div class="date">2026 – Present</div>
+      <div>
+        <strong>Freelance AI Engineer</strong>
+        <p>
+          Building AI applications involving multimodal interview
+          analysis, conversational systems, and retrieval-augmented
+          generation.
+        </p>
+      </div>
+
+      <div class="date">2026 – Present</div>
+      <div>
+        <strong>Independent AI Research &amp; Development</strong>
+        <p>
+          Exploring model architectures, generative modeling,
+          training strategies, and resource-efficient AI engineering.
+        </p>
+      </div>
+    </div>
+
+    <p class="note">
+      Experience descriptions should reflect the work and results
+      you can substantiate.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>selected projects</h2>
+
+    <div class="project">
+      <a class="project-title"
+         href="https://github.com/ahmedayad0168/FlowCraft-DiT"
+         target="_blank" rel="noopener noreferrer">
+        FlowCraft-DiT ↗
+      </a>
 
       <p>
-        I'm Ahmed Ayad, an AI & Deep Learning Engineer focused on
-        Generative AI, Computer Vision, LLMs, and AI Agents.
-        I enjoy building end-to-end AI systems and exploring how to
-        train capable models under limited compute resources.
+        A text-to-image model built around Rectified Flow Matching
+        and a multimodal Diffusion Transformer. The project explores
+        training generative models from scratch under limited GPU memory.
       </p>
 
-      <div class="actions">
-        <a class="btn primary" href="#projects">Explore my projects ↗</a>
-        <a class="btn" href="https://github.com/ahmedayad0168"
-           target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        <a class="btn" href="https://www.linkedin.com/in/ahmed-ayad-7854aa3a7/"
-           target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <div class="tags">
+        PyTorch · Diffusion Models · Transformers · Generative AI
       </div>
-    </section>
+    </div>
 
-    <section class="section container" id="about">
-      <div class="section-head">
-        <h2>About me</h2>
-        <p>Research-minded engineering with practical implementation.</p>
+    <div class="project">
+      <a class="project-title"
+         href="https://github.com/ahmedayad0168/Omni-AgriVision"
+         target="_blank" rel="noopener noreferrer">
+        Omni-AgriVision ↗
+      </a>
+
+      <p>
+        An agriculture-focused AI platform combining object detection,
+        multi-object tracking, image classification, lesion segmentation,
+        and retrieval-based AI assistance.
+      </p>
+
+      <div class="tags">
+        YOLO · Computer Vision · FastAPI · RAG · AI Agents
       </div>
+    </div>
 
-      <div class="card about-card">
-        <p>
-          I'm pursuing a B.Sc. in Computer Science & AI at Sadat City
-          University. My work spans model development, experimentation,
-          APIs, retrieval-augmented generation, and AI-powered applications.
-        </p>
-        <p>
-          I focus on understanding systems deeply, implementing ideas,
-          measuring results, and making the most of limited hardware.
-          My portfolio includes independent research and practical AI projects.
-        </p>
+    <div class="project">
+      <a class="project-title"
+         href="https://github.com/ahmedayad0168/multi-agent-system"
+         target="_blank" rel="noopener noreferrer">
+        Multi-Agent System ↗
+      </a>
+
+      <p>
+        A multi-agent workflow with planning, research, critique,
+        and memory components, integrating language models and search.
+      </p>
+
+      <div class="tags">
+        LLMs · Agentic AI · Python · Retrieval
       </div>
-    </section>
+    </div>
 
-    <section class="section container" id="skills">
-      <div class="section-head">
-        <h2>Technical skills</h2>
-        <p>Tools and areas I work with.</p>
+    <div class="project">
+      <a class="project-title"
+         href="https://github.com/ahmedayad0168/rag-chatbot-with-ollama"
+         target="_blank" rel="noopener noreferrer">
+        RAG Chatbot ↗
+      </a>
+
+      <p>
+        A document-grounded chatbot exploring semantic retrieval,
+        embeddings, and local language-model inference.
+      </p>
+
+      <div class="tags">
+        RAG · Ollama · Embeddings · LLMs
       </div>
+    </div>
 
-      <div class="skills">
-        <span class="tag">Python</span>
-        <span class="tag">PyTorch</span>
-        <span class="tag">Deep Learning</span>
-        <span class="tag">Generative AI</span>
-        <span class="tag">Transformers</span>
-        <span class="tag">Computer Vision</span>
-        <span class="tag">LLMs</span>
-        <span class="tag">RAG</span>
-        <span class="tag">AI Agents</span>
-        <span class="tag">Diffusion Models</span>
-        <span class="tag">Hugging Face</span>
-        <span class="tag">FastAPI</span>
-        <span class="tag">Docker</span>
-        <span class="tag">SQL</span>
-        <span class="tag">Git & GitHub</span>
+    <div class="project">
+      <a class="project-title"
+         href="https://github.com/ahmedayad0168/DiffusionCraft"
+         target="_blank" rel="noopener noreferrer">
+        DiffusionCraft ↗
+      </a>
+
+      <p>
+        An experimental image-generation project exploring
+        diffusion-model training and generative learning.
+      </p>
+
+      <div class="tags">
+        Deep Learning · PyTorch · Generative Models
       </div>
-    </section>
+    </div>
 
-    <section class="section container" id="projects">
-      <div class="section-head">
-        <h2>Featured projects</h2>
-        <p>Selected AI engineering and research work.</p>
-      </div>
+    <p>
+      More projects and source code are available on
+      <a href="https://github.com/ahmedayad0168?tab=repositories"
+         target="_blank" rel="noopener noreferrer">
+        my GitHub repositories ↗
+      </a>.
+    </p>
+  </section>
 
-      <div class="grid">
-        <article class="card">
-          <div class="project-top">
-            <h3>FlowCraft-DiT</h3>
-            <a href="https://github.com/ahmedayad0168/FlowCraft-DiT"
-               target="_blank" rel="noopener noreferrer">Source ↗</a>
-          </div>
-          <p>
-            A text-to-image research project built around Rectified Flow
-            Matching and a Multimodal Diffusion Transformer, with a focus
-            on training and experimentation under limited GPU memory.
-          </p>
-          <div class="tags">
-            <span class="tag">PyTorch</span>
-            <span class="tag">Diffusion</span>
-            <span class="tag">Transformers</span>
-          </div>
-        </article>
+  <section id="skills">
+    <h2>technical skills</h2>
 
-        <article class="card">
-          <div class="project-top">
-            <h3>Omni-AgriVision</h3>
-            <a href="https://github.com/ahmedayad0168/Omni-AgriVision"
-               target="_blank" rel="noopener noreferrer">Source ↗</a>
-          </div>
-          <p>
-            An agriculture AI platform combining object detection,
-            multi-object tracking, image classification, lesion
-            segmentation, and retrieval-based AI assistance.
-          </p>
-          <div class="tags">
-            <span class="tag">YOLO</span>
-            <span class="tag">Computer Vision</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">RAG</span>
-          </div>
-        </article>
+    <p>
+      <strong>Languages:</strong>
+      Python, SQL
+    </p>
 
-        <article class="card">
-          <div class="project-top">
-            <h3>Multi-Agent System</h3>
-            <a href="https://github.com/ahmedayad0168/multi-agent-system"
-               target="_blank" rel="noopener noreferrer">Source ↗</a>
-          </div>
-          <p>
-            An agent-based workflow for planning, research, critique,
-            and memory, using language models and web-search tools.
-          </p>
-          <div class="tags">
-            <span class="tag">AI Agents</span>
-            <span class="tag">RAG</span>
-            <span class="tag">Python</span>
-          </div>
-        </article>
+    <p>
+      <strong>Deep Learning:</strong>
+      PyTorch, neural networks, Transformers, diffusion models,
+      model training and evaluation
+    </p>
 
-        <article class="card">
-          <div class="project-top">
-            <h3>RAG Chatbot</h3>
-            <a href="https://github.com/ahmedayad0168/rag-chatbot-with-ollama"
-               target="_blank" rel="noopener noreferrer">Source ↗</a>
-          </div>
-          <p>
-            A retrieval-augmented chatbot project using document
-            retrieval, embeddings, and a locally served language model.
-          </p>
-          <div class="tags">
-            <span class="tag">RAG</span>
-            <span class="tag">Ollama</span>
-            <span class="tag">Embeddings</span>
-          </div>
-        </article>
+    <p>
+      <strong>Generative AI:</strong>
+      LLMs, RAG, embeddings, AI agents, multimodal systems
+    </p>
 
-        <article class="card">
-          <div class="project-top">
-            <h3>DiffusionCraft</h3>
-            <a href="https://github.com/ahmedayad0168/DiffusionCraft"
-               target="_blank" rel="noopener noreferrer">Source ↗</a>
-          </div>
-          <p>
-            An experimental diffusion-model project exploring image
-            generation and the training process.
-          </p>
-          <div class="tags">
-            <span class="tag">Deep Learning</span>
-            <span class="tag">Diffusion Models</span>
-          </div>
-        </article>
+    <p>
+      <strong>Computer Vision:</strong>
+      Object detection, tracking, classification, segmentation
+    </p>
 
-        <article class="card">
-          <div class="project-top">
-            <h3>More projects</h3>
-            <a href="https://github.com/ahmedayad0168?tab=repositories"
-               target="_blank" rel="noopener noreferrer">All repositories ↗</a>
-          </div>
-          <p>
-            Explore my other work in medical AI, machine learning,
-            computer vision, and AI-powered applications.
-          </p>
-          <div class="tags">
-            <span class="tag">Open Source</span>
-            <span class="tag">AI Research</span>
-          </div>
-        </article>
-      </div>
-    </section>
+    <p>
+      <strong>Engineering:</strong>
+      FastAPI, Docker, Git, databases, model serving
+    </p>
+  </section>
 
-    <section class="section container" id="contact">
-      <div class="card contact-card">
-        <div class="section-head">
-          <h2>Let's connect</h2>
-          <p>
-            Interested in AI engineering, deep learning research,
-            or building practical AI systems?
-          </p>
-        </div>
-        <div class="actions" style="justify-content:center">
-          <a class="btn primary"
-             href="https://www.linkedin.com/in/ahmed-ayad-7854aa3a7/"
-             target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
-          <a class="btn" href="https://github.com/ahmedayad0168"
-             target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a>
-        </div>
-      </div>
-    </section>
-  </main>
+  <section id="contact">
+    <h2>contact</h2>
+
+    <p>
+      I'm interested in AI engineering opportunities, internships,
+      deep learning research, and building useful AI systems.
+    </p>
+
+    <ul>
+      <li>
+        <a href="https://github.com/ahmedayad0168"
+           target="_blank" rel="noopener noreferrer">GitHub</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/ahmed-ayad-7854aa3a7/"
+           target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </li>
+    </ul>
+  </section>
 
   <footer>
-    <div class="container">
-      © <span id="year"></span> Ahmed Ayad · Built with HTML, CSS & JavaScript
-    </div>
+    <p>
+      Ahmed Ayad · AI &amp; Deep Learning Engineer
+      <br>
+      Built with plain HTML and CSS. Hosted on GitHub Pages.
+    </p>
+    <p>Last updated: October 2026</p>
   </footer>
 
-  <script>
-    const menuButton = document.getElementById("menuButton");
-    const navLinks = document.getElementById("navLinks");
-
-    menuButton.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
-      menuButton.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuButton.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+</main>
 </body>
 </html>
